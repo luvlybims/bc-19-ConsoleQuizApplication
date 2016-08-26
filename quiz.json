@@ -1,0 +1,29 @@
+{ "General": [
+            {"question": "1. Who is the president of Nigeria?", "options": "a: Mohammed Buhari, b: Tony Enemule, c: Goodluck Jonathan", "answer": "a"},
+            {"question": "2. What is 'Tiger' Woods's first name?", "options": "a: Fedrick, b: Eldrick, c: Maverick", "answer": "b"},
+            {"question": "3. Which has the highest mountain: Earth or Mars?", "options": "a: Mars, b: Jupiter, c: Venus", "answer": "a"},
+            {"question": "4. What is the most common blood type in humans?", "options": "a: Type B, b: Type AB, c: Type O", "answer": "c"},
+            {"question": "5. Xenophobia is a fear of?", "options": "a: Strangers, b: Friends, c: Parents", "answer": "a"},
+            {"question": "6. What do communication satellites and a modern kitchen appliance have in common?", "options": "a: Transmitter, b: Plastics, c: Microwaves", "answer": "c"},
+            {"question": "7. What is the name of Moe's pet cat in the cartoon show The Simpsons?", "options": "a: Mr Snooker, b: Mr Snookums, c: Mr Snitches", "answer": "b"},
+            {"question": "8. What type of creature is a dugite?", "options": "a: Whale, b: Dragon, c: Snake", "answer": "c"},
+            {"question": "9. What is the square root of 169?", "options": "a: 19, b: 13, c: 17", "answer": "b"},
+            {"question": "10. What is the name of the element with the chemical symbol 'He'?", "options": "a: Helium, b: Hydrogen, c: Herium", "answer": "a"}
+],
+
+
+"Computer": [
+            {"question": "1. Which of the following word processors came first?", "options": "a: WordPad, b: MsWord, c: WordStar", "answer": "c"},
+            {"question": "2. In which decade was the American Institute of Electrical Engineers (AIEE) founded", "options": "a: 1900s, b: 1880s, c: 1790s", "answer": "b"},
+            {"question": "3. What is part of a database that holds only one type of information?", "options": "a: Schema, b: Keys: c: Field", "answer": "c"},
+            {"question": "4. 'OS' computer abbreviation usually means?", "options": "a: Organization System, b: Operating System, c: Overloaded Storage", "answer": "b"},
+            {"question": "5. Which is largest: a Megabyte, Kilobyte or Gigabyte?", "answer": "a", "options": "a: Gigabyte, b: Megabyte, c: Kilobyte"},
+            {"question": "6. http://www.facebook.com - is an example of what", "options": "a: Protocol, b: Server, c: Url", "answer": "c"},
+            {"question": "7. How many bits is a byte?", "options": "a: 8, b: 1004, c: 4", "answer": "a"},
+            {"question": "8. Google (www.google.com) is a...", "options": "a: Search Engine, b: Compiler, c: Storage Device", "answer": "a"},
+            {"question": "9. What is a MAC?", "options": "a: Media Access Control, b: Macintosh, c: Message Access Controller", "answer": "a"},
+            {"question": "10. The abbreviation URL stands for:", "options": "a: Universal Resource Locator, b: Uniform Registry Location, c: Uniform Resource Locator", "answer": "c"}
+
+]
+
+}

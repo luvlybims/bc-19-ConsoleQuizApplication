@@ -1,0 +1,33 @@
+{
+  "name": "console-quiz-application",
+  "version": "1.0.0",
+  "description": "this is a console quiz application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luvlybims/bc-19-ConsoleQuizApplication.git"
+  },
+  "keywords": [
+    "quiz",
+    "console"
+  ],
+  "author": "Abimbola Aderoju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luvlybims/bc-19-ConsoleQuizApplication/issues"
+  },
+  "homepage": "https://github.com/luvlybims/bc-19-ConsoleQuizApplication#readme",
+  "dependencies": {
+    "firebase": "^3.3.0"
+  },
+  "devDependencies": {
+    "clear": "0.0.1",
+    "colors": "^1.1.2",
+    "figlet": "^1.1.2",
+    "inquirer": "^1.1.2",
+    "jsonfile": "^2.3.1"
+  }
+}
