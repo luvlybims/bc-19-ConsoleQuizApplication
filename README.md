@@ -4,7 +4,9 @@ This a Quiz Application that runs at command line. It was developed with Sublime
 The Quiz Application has the following commands:
 
 1.listquizzes - This lists all of the available quizzes in the user's library.
+
 2.importquiz - This imports a new quiz from a JSON file.
+
 3.takequiz - This starts a new quiz.
 
 The application also has the following functionalities:
