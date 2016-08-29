@@ -7,6 +7,9 @@ var chalk = require('chalk');
 //require the dependency to create ASCII Art from quiz name
 var figlet = require('figlet')
 
+//require the dependency to read json file
+var jsonfile = require("jsonfile");
+
 
 //require the dependency to read user input
 var inquirer = require('inquirer');
@@ -14,6 +17,9 @@ var inquirer = require('inquirer');
 //require listquizzes.js in current directory
 var listQuiz = require('./listquizzes');
 
+var quizfile = "./quiz.json";
+
+//clear console
 clear();
 console.log(
   chalk.red.bgGreen.bold(
@@ -38,7 +44,7 @@ function optionList() {
         if (option === 'l') {               
           console.log(chalk.cyan.bold('\n\nQuizzes are listed below by Subject:\n'));
                 
-                    //call this.list() in listquizzes.js
+          //call this.list() in listquizzes.js
           newList.list();
 
           process.exit();
@@ -51,27 +57,18 @@ function optionList() {
 
     inquirer.prompt(question);          
 }
-
-
 optionList();
 
-
-//require the dependency to read json file
-var jsonfile = require("jsonfile");
-
-
-var quizfile = "./quiz.json";
 
 /** 
  * Class to list quizzes in quiz.json file
  * 
  */
-// var ListQuiz = function () { 
 var ListQuiz = function () {
 
 /**
- * list the quizzes in quiz.json 
- */
+ * list the quizzes in quiz.json  
+*/
   this.list = function() {
     var filecontent = jsonfile.readFileSync(quizfile);
     console.log(filecontent);   

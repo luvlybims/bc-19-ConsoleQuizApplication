@@ -36,7 +36,7 @@ var ImportQuiz = function () {
           message: chalk.cyan.bold('\nimportquiz <path_to_quiz_JSON>.....Please enter subject of quiz to import: '), 
           validate: function(subject) {
             if (subject === 'General' || subject === 'Computer') {
-              console.log(`\nYou have entered ${subject} as your choice subject\n`)                       
+              console.log('\nYou have entered '+subject+ 'as your choice subject\n');                     
               var question = 
                 [
                   {
@@ -45,12 +45,12 @@ var ImportQuiz = function () {
                      message: chalk.cyan.bold('\nPlease enter path to JSON file: '),
                      validate: function(path) {
                        if (path.length > 0) {          
-                         console.log(`\n${subject} Quiz in path ${path} is listed below:\n`)
-                         for (let i = 0; i < filecontent[subject].length; i++) {
+                         console.log('\n'+subject+ ' quiz in path '+path+ 'is listed below:\n');
+                         for (var i = 0; i < filecontent[subject].length; i++) {
                            var question = filecontent[subject][i]['question'];
                            var options = filecontent[subject][i]['options'];
                            var answer = filecontent[subject][i]['answer'];
-                           result = `question: ${question}\noptions: ${options}\nanswer: ${answer} \n`;
+                           result = 'question: '+question+ '\noptions: '+options+ '\nanswer: '+answer+ '\n';
                            console.log(result);                              
                          } 
 
@@ -84,4 +84,3 @@ myImport = new ImportQuiz();
 //import quiz by Subject entered by user
 myImport.importQuest('');
 
-//module.exports = dependency;
