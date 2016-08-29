@@ -33,17 +33,17 @@ function optionList() {
     {
       name: 'response',
       type: 'input',
-      message: '\nlistquizzes.....Please enter \'l\' to list quizzes: ',
+      message: chalk.cyan.bold('\nlistquizzes.....Please enter \'l\' to list quizzes: '),
       validate: function(option) {
         if (option === 'l') {               
-          console.log('\n\nQuizzes are listed below by Subject: ');
+          console.log(chalk.cyan.bold('\n\nQuizzes are listed below by Subject:\n'));
                 
                     //call this.list() in listquizzes.js
           newList.list();
 
           process.exit();
           } else {
-              return 'Please enter \'l\' above to list quizzes';
+              return chalk.cyan.red('Please enter \'l\' above to list quizzes');
                  }
       }
     } 
@@ -52,6 +52,33 @@ function optionList() {
     inquirer.prompt(question);          
 }
 
-//list quizzes
-//this.optionList();
+
 optionList();
+
+
+//require the dependency to read json file
+var jsonfile = require("jsonfile");
+
+
+var quizfile = "./quiz.json";
+
+/** 
+ * Class to list quizzes in quiz.json file
+ * 
+ */
+// var ListQuiz = function () { 
+var ListQuiz = function () {
+
+/**
+ * list the quizzes in quiz.json 
+ */
+  this.list = function() {
+    var filecontent = jsonfile.readFileSync(quizfile);
+    console.log(filecontent);   
+  }
+}
+
+ListQuiz(); 
+module.exports = ListQuiz;
+
+
