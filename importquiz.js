@@ -1,30 +1,39 @@
+//require the dependency to clear console
+var clear = require('clear');
+
 //require the dependency to read json file
 var jsonfile = require('jsonfile');
 
 //require the dependency to read user input
-var inquirer = require('inquirer');
+ var inquirer = require('inquirer');
 
 //require quiz.json in current directory
 var importquiz = './quiz.json';
 
+//require the dependency to style quiz name
+var chalk = require('chalk');
+
 var filecontent = jsonfile.readFileSync(importquiz);
+
+clear();
 
 /** 
  * Class to import a new quiz from a JSON file
  * 
  */
 var ImportQuiz = function () {
+
      
 /** 
  * prompt the user to enter subject of quiz to import 
  */
-  this.importQuest = function(subject) {        
+  this.importQuest = function(subject) {
     var question2 =
       [
         {
           name: 'response',
           type: 'input',
-          message: '\nimportquiz <path_to_quiz_JSON>.....Please enter subject of quiz to import: ', 
+          message: chalk.cyan.bold('\nimportquiz <path_to_quiz_JSON>.....Please enter subject of quiz to import: '), 
           validate: function(subject) {
             if (subject === 'General' || subject === 'Computer') {
               console.log(`\nYou have entered ${subject} as your choice subject\n`)                       
@@ -33,7 +42,7 @@ var ImportQuiz = function () {
                   {
                      name: 'response',
                      type: 'input',
-                     message: '\nPlease enter path to JSON file: ',
+                     message: chalk.cyan.bold('\nPlease enter path to JSON file: '),
                      validate: function(path) {
                        if (path.length > 0) {          
                          console.log(`\n${subject} Quiz in path ${path} is listed below:\n`)
@@ -48,7 +57,7 @@ var ImportQuiz = function () {
                          process.exit();
 
                        } else {                   
-                           return 'Please enter path above as a string';
+                           return chalk.red.bold('Please enter path above as a string');
                        }            
                      }
                   }            
@@ -74,4 +83,5 @@ myImport = new ImportQuiz();
 
 //import quiz by Subject entered by user
 myImport.importQuest('');
-        
+
+//module.exports = dependency;
